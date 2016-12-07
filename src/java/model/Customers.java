@@ -12,6 +12,7 @@ public class Customers {
     private String city;
     private String state;
     private String zip;
+    private String emailAddr;
 
     
     
@@ -109,7 +110,6 @@ public class Customers {
     public void setEmailAddr(String emailAddr) {
         this.emailAddr = emailAddr;
     }
-    private String emailAddr;
 
     @Override
     public String toString() {
