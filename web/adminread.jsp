@@ -1,6 +1,6 @@
 <%-- 
-    Document   : read
-    Created on : Dec 6, 2016, 8:55:28 PM
+    Document   : adminread
+    Created on : Dec 7, 2016, 11:00:27 PM
     Author     : cassyfreedman
 --%>
 
@@ -9,14 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Customer Read</title>
+        <title>Customers</title>
     </head>
     
     <% String table = (String) request.getAttribute("table");%>
     
     <body>
         <h1>Customers</h1>
-        <%= table %>
-        
+        <%= table%>
+        <br><br>
+        <a href ="add">Add A New Customer</a>
     </body>
 </html>

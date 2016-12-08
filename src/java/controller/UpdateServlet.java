@@ -5,7 +5,7 @@
  */
 package controller;
 
-import dbhelpers.AddQuery;
+import dbhelpers.UpdateQuery;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -20,8 +20,8 @@ import model.Customers;
  *
  * @author cassyfreedman
  */
-@WebServlet(name = "AddServlet", urlPatterns = {"/addCustomer"})
-public class AddServlet extends HttpServlet {
+@WebServlet(name = "UpdateServlet", urlPatterns = {"/updateCustomer"})
+public class UpdateServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,10 +40,10 @@ public class AddServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AddServlet</title>");            
+            out.println("<title>Servlet UpdateServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet AddServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet UpdateServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -75,6 +75,8 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        int custID = Integer.parseInt(request.getParameter("id"));
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String addr1 = request.getParameter("addr1");
@@ -83,9 +85,10 @@ public class AddServlet extends HttpServlet {
         String state = request.getParameter("state");
         String zip = request.getParameter("zip");
         String emailAddr = request.getParameter("emailAddr");
-    
+       
         
-        Customers customer = new Customers();
+        Customers customer = new Customers ();
+        customer.setCustID(custID);
         customer.setFirstName(firstName);
         customer.setLastName(lastName);
         customer.setAddr1(addr1);
@@ -95,13 +98,13 @@ public class AddServlet extends HttpServlet {
         customer.setZip(zip);
         customer.setEmailAddr(emailAddr);
         
-        AddQuery aq = new AddQuery ();
-        aq.doAdd (customer);
+        UpdateQuery uq = new UpdateQuery();
+        uq.doUpdate(customer);
         
         String url = "/adminread";
         
-        RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-        dispatcher.forward (request, response);
+        RequestDispatcher dispatcher = request.getRequestDispatcher (url);
+        dispatcher.forward(request, response);
     }
 
     /**

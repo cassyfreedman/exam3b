@@ -4,11 +4,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Customers</title>
+        <title>Administrative</title>
     </head>
     <body>
-        <h1>My Customers Database</h1>
-        <a href="read">View All Customers</a>
-        <a href="./admin.jsp">Administrative</a>
+        <h1>Administrative</h1>
+        <a href="adminread">View All Customers</a>
     </body>
 </html>

@@ -5,7 +5,7 @@
  */
 package controller;
 
-import dbhelpers.AddQuery;
+import dbhelpers.ReadRecord;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -20,8 +20,8 @@ import model.Customers;
  *
  * @author cassyfreedman
  */
-@WebServlet(name = "AddServlet", urlPatterns = {"/addCustomer"})
-public class AddServlet extends HttpServlet {
+@WebServlet(name = "UpdateFormServlet", urlPatterns = {"/update"})
+public class UpdateFormServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,10 +40,10 @@ public class AddServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AddServlet</title>");            
+            out.println("<title>Servlet UpdateFormServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet AddServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet UpdateFormServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -75,33 +75,16 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
-        String addr1 = request.getParameter("addr1");
-        String addr2 = request.getParameter("addr2");
-        String city = request.getParameter("city");
-        String state = request.getParameter("state");
-        String zip = request.getParameter("zip");
-        String emailAddr = request.getParameter("emailAddr");
-    
         
-        Customers customer = new Customers();
-        customer.setFirstName(firstName);
-        customer.setLastName(lastName);
-        customer.setAddr1(addr1);
-        customer.setAddr2(addr2);
-        customer.setCity(city);
-        customer.setState(state);
-        customer.setZip(zip);
-        customer.setEmailAddr(emailAddr);
-        
-        AddQuery aq = new AddQuery ();
-        aq.doAdd (customer);
-        
-        String url = "/adminread";
-        
+        int custID = Integer.parseInt(request.getParameter("custID"));
+        ReadRecord rr = new ReadRecord(custID);
+        rr.doRead();
+        Customers customer = rr.getCustomer();
+        request.setAttribute("customer", customer);
+        String url = "/updateForm.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-        dispatcher.forward (request, response);
+        dispatcher.forward(request, response);
+        
     }
 
     /**
