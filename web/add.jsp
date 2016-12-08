@@ -10,8 +10,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Add a New Customer</title>
+        <link rel="stylesheet" type="text/css" href="./admincss/customers.css" />
     </head>
     <body>
+        <div class="wrap">
+            <%@ include file="Adminincludes/header.jsp" %>
+
+            <!--Menu-->
+            <%@ include file="Adminincludes/menu.jsp" %>
+            <div class="main">
         <h1>Add a New Customer</h1>
         <form name="addForm" action="addCustomer" method="post">
             <table>
@@ -121,7 +128,7 @@
                     <td class = "right">
                         Zip:  
                     </td>
-                    <td class = "left"><input type="text" name="zip" value="" size="50" required /> 
+                    <td class = "left"><input type="number" name="zip" value="" size="50" required /> 
                     </td>
                 </tr>
                 <tr>
@@ -129,7 +136,7 @@
                     <td class = "right">
                         Email:  
                     </td>
-                    <td class = "left"><input type="text" name="emailAddr" value="" size="50" required /> 
+                    <td class = "left"><input type="email" name="emailAddr" value="" size="50" required /> 
                     </td>
                 </tr>
 
@@ -139,5 +146,9 @@
             <input type="submit" value="Submit" id="submit"/>
             <br><br>
         </form>
+        </div>
+            <!--footer-->
+            <%@ include file="Adminincludes/footer.jsp" %>
+        </div> 
     </body>
 </html>

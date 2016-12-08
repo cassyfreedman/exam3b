@@ -13,8 +13,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Update Page</title>
+        <link rel="stylesheet" type="text/css" href="./css/customers.css" />
     </head>
     <body>
+        <div class="wrap">
+            <%@ include file="includes/header.jsp" %>
+
+            <!--Menu-->
+            <%@ include file="includes/menu.jsp" %>
+            <div class="main">
         <h1>Add a New Customer</h1>
         <form name="updateForm" action="updateCustomer" method="post">
             <table>
@@ -82,7 +89,7 @@
                     <td class = "right">
                         Zip:  
                     </td>
-                    <td class = "left"><input type="text" name="zip" value="<%= customer.getZip() %>" size="50" required /> 
+                    <td class = "left"><input type="number" name="zip" value="<%= customer.getZip() %>" size="50" required /> 
                     </td>
                 </tr>
                 <tr>
@@ -90,7 +97,7 @@
                     <td class = "right">
                         Email:  
                     </td>
-                    <td class = "left"><input type="text" name="emailAddr" value="<%= customer.getEmailAddr() %>" size="50" required /> 
+                    <td class = "left"><input type="email" name="emailAddr" value="<%= customer.getEmailAddr() %>" size="50" required /> 
                     </td>
                 </tr>
 
@@ -101,5 +108,9 @@
             <input type="submit" value="Submit" id="Update"/>
             <br><br>
         </form>
+                    </div>
+            <!--footer-->
+            <%@ include file="includes/footer.jsp" %>
+        </div> 
     </body>
 </html>
