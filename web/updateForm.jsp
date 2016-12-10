@@ -104,8 +104,10 @@
             </table>
 
             <br><br>
+            <div class='buttons'>
             <input type="reset" name="reset" value="Clear"/><br>
             <input type="submit" value="Submit" id="Update"/>
+            </div>
             <br><br>
         </form>
                     </div>

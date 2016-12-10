@@ -15,8 +15,6 @@
             <%@ include file="includes/menu.jsp" %>
             <div class="main">
         <h1>Customers Database</h1>
-        <a href="search.jsp"> Search </a>
-        <a href="adminSearch.jsp"> Admin Search </a>
         
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ex tellus. Aenean commodo elit non maximus congue. Duis viverra euismod nisl, quis lacinia magna pharetra sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec quis felis ac leo gravida dictum sed euismod massa. Proin ultrices nibh elit, eu blandit lectus mollis nec. Sed ante eros, sagittis et lectus at, pretium ultricies nibh. Maecenas pharetra, sapien a congue dictum, ex est eleifend dui, vitae efficitur quam sem tempus urna. Morbi at augue vitae mauris accumsan fermentum. Donec iaculis enim id enim placerat, at finibus nisl sodales. Integer pharetra magna arcu, luctus fermentum lectus suscipit quis. 

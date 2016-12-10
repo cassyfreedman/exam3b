@@ -143,7 +143,7 @@
             </table>
 
             <br><br>
-            <input type="submit" value="Submit" id="submit"/>
+            <input type="submit" name="submit" value="Submit" />
             <br><br>
         </form>
         </div>

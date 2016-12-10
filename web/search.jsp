@@ -12,10 +12,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form name ="searchForm" action="search" method="get">
+        <form name ="searchForm" action="search" method="post">
                     <input type="text" name="searchVal" value="" />
                     <br><br>
-                    <input type="submit" name="submit" value="Search" /><br><br>
+                    <input type="submit" name="search" value="Search" /><br><br>
 
                 </form>                      
     </body>
