@@ -13,16 +13,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Update Page</title>
-        <link rel="stylesheet" type="text/css" href="./css/customers.css" />
+        <link rel="stylesheet" type="text/css" href="./admincss/customers.css" />
     </head>
     <body>
         <div class="wrap">
-            <%@ include file="includes/header.jsp" %>
+            <%@ include file="Adminincludes/header.jsp" %>
 
             <!--Menu-->
-            <%@ include file="includes/menu.jsp" %>
+            <%@ include file="Adminincludes/menu.jsp" %>
             <div class="main">
-        <h1>Add a New Customer</h1>
+        <h1>Update Customer</h1>
         <form name="updateForm" action="updateCustomer" method="post">
             <table>
 
@@ -104,15 +104,15 @@
             </table>
 
             <br><br>
-            <div class='buttons'>
-            <input type="reset" name="reset" value="Clear"/><br>
+            <div style="text-align:center;"> 
+            <input type="reset" name="reset" value="Clear"/>
             <input type="submit" value="Submit" id="Update"/>
             </div>
             <br><br>
         </form>
                     </div>
             <!--footer-->
-            <%@ include file="includes/footer.jsp" %>
+            <%@ include file="Adminincludes/footer.jsp" %>
         </div> 
     </body>
 </html>

@@ -142,9 +142,9 @@
 
             </table>
 
-            <br><br>
+            <br><br><div style="text-align:center;"> 
             <input type="submit" name="submit" value="Submit" />
-            <br><br>
+            <br><br></div>
         </form>
         </div>
             <!--footer-->

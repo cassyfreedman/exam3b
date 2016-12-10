@@ -1,5 +1,4 @@
 
-
 .wrap{Text-align:left; width:90%; margin: 0 auto; border: 0px solid black; margin-top:25px;}
 .header{ text-align:left;padding:0px;}
 .headerText {float:left; height:75px; padding-top:10px; padding-left:0px;}
@@ -44,8 +43,8 @@ body {
     text-align: left;
 }
 
-html, body {
-    width: 100%;
+body {
+    width: 97.5%;
     border-style: solid;
     border-width: 10px;
     border-color: #9932cc;
