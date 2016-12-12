@@ -10,12 +10,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Customer Read</title>
-        <link rel="stylesheet" type="text/css" href="./css/customers.css" />
+       <link rel="stylesheet" type="text/css" href="./css/customers.css" />
     </head>
     
     <% String table = (String) request.getAttribute("table");%>
     
-    <body
+    <body>
         <div class="wrap">
             <%@ include file="includes/header.jsp" %>
 
@@ -30,3 +30,4 @@
         </div> 
     </body>
 </html>
+
